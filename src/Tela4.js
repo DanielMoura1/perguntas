@@ -6,7 +6,7 @@ export default function Tela4(props){
     async function tema1(){
       
         let escolha='Sim'
-        await axios.post('https://54.236.47.96/daniel',{
+        await axios.post('http://54.236.47.96/daniel',{
             nome,escolha
        })
         navigate("/");
@@ -14,7 +14,7 @@ export default function Tela4(props){
     async function tema2(){
        
         let escolha='Não'
-        await axios.post('https://54.236.47.96/daniel',{
+        await axios.post('http://54.236.47.96/daniel',{
             nome,escolha
        })
         navigate("/");
