@@ -8,7 +8,7 @@ export default function Tela1(props){
 
         let escolha='Bad and Crazy'
         try{
-            await axios.post('http://54.236.47.96/tela1',{
+            await axios.post('https://54.236.47.96/tela1',{
                 nome,escolha
            })
             navigate("/tela2")
