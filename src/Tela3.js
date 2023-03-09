@@ -4,7 +4,7 @@ export default function Tela3(props){
     const navigate = useNavigate();
     const {nome} = props
     async function tema1(){
-        alert('1')
+        
         let escolha='Wandinha'
         await axios.post('http://54.236.47.96/tela3',{
             nome,escolha
@@ -12,7 +12,7 @@ export default function Tela3(props){
         navigate("/tela4");
     }
     async function tema2(){
-        alert('2')
+        
         let escolha='Stranger Things'
         await axios.post('http://54.236.47.96/tela3',{
             nome,escolha
@@ -21,7 +21,7 @@ export default function Tela3(props){
     }
     return(
     <div className="body">
-        <div className="nome">usuario:  {nome}</div>
+        <div className="nome">Usuário:  {nome}</div>
         <div className="texto">Você prefere Wandinha ou Stranger Things ?</div>
         <div className="quandro">
             <div className="caixa" onClick={tema1}>
