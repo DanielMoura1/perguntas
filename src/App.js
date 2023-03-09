@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-
-function App() {
+import Tela1 from "./Tela1.js";
+import Tela2 from "./Tela2.js";
+import Tela3 from "./Tela3.js";
+import Tela4 from "./Tela4.js";
+import TelaNome from "./TelaNome";
+import { useState, useEffect } from 'react';
+export default  function App() {
+  const localStorageTeste = JSON.parse(localStorage.getItem('nome'))
+  let nome = localStorage.getItem('nome') !== null ? localStorageTeste:""
+  const [nomee,setNome] =useState(nome)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div >
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<TelaNome setNomee={setNome}/>} />
+      <Route path="/tela1" element={<Tela1 nome={nomee}/>} />
+      <Route path="/tela2" element={<Tela2 nome={nomee}/>} />
+      <Route path="/tela3" element={<Tela3 nome={nomee}/>} />
+      <Route path="/tela4" element={<Tela4 nome={nomee}/>} />
+    </Routes>
+    </BrowserRouter>
+  </div>
+)
 }
 
-export default App;
+//export default App;
