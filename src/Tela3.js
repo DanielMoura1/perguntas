@@ -6,7 +6,7 @@ export default function Tela3(props){
     async function tema1(){
         
         let escolha='Wandinha'
-        await axios.post('http://54.236.47.96/tela3',{
+        await axios.post('https://54.236.47.96/tela3',{
             nome,escolha
        })
         navigate("/tela4");
@@ -14,7 +14,7 @@ export default function Tela3(props){
     async function tema2(){
         
         let escolha='Stranger Things'
-        await axios.post('http://54.236.47.96/tela3',{
+        await axios.post('https://54.236.47.96/tela3',{
             nome,escolha
        })
         navigate("/tela4");
