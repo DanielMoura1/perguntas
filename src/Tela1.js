@@ -7,10 +7,15 @@ export default function Tela1(props){
     async function tema1(){
 
         let escolha='Bad and Crazy'
-        await axios.post('https://54.236.47.96/tela1',{
-            nome,escolha
-       })
-        navigate("/tela2");
+        try{
+            await axios.post('http://54.236.47.96/tela1',{
+                nome,escolha
+           })
+            navigate("/tela2")
+         }catch(e){
+            console.log(e)
+         }
+       ;
     }
     async function tema2(){
         
