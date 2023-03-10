@@ -1,6 +1,6 @@
 import { Link ,useNavigate } from "react-router-dom";
 import axios from "axios";
-
+//docker-compose up nginx
 export default function Tela1(props){
     const navigate = useNavigate();
     const {nome} = props
