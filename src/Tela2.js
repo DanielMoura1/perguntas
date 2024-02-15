@@ -6,17 +6,17 @@ export default function Tela2(props){
     async function tema1(){
       
         let escolha='Marvel'
-        await axios.post('http://54.236.47.96/tela2',{
-            nome,escolha
-       })
+        //await axios.post('http://54.236.47.96/tela2',{
+         //   nome,escolha
+      // })
         navigate("/tela3");
     }
     async function tema2(){
         
-        let escolha='DC'
-        await axios.post('http://54.236.47.96/tela2',{
-            nome,escolha
-       })
+       // let escolha='DC'
+        //await axios.post('http://54.236.47.96/tela2',{
+        //    nome,escolha
+       //})
         navigate("/tela3");
     }
     return(

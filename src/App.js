@@ -7,6 +7,8 @@ import Tela4 from "./Tela4.js";
 import TelaNome from "./TelaNome";
 import { useState, useEffect } from 'react';
 export default  function App() {
+  //docker system prune -a
+  //docker-compose up nginx
   const localStorageTeste = JSON.parse(localStorage.getItem('nome'))
   let nome = localStorage.getItem('nome') !== null ? localStorageTeste:""
   const [nomee,setNome] =useState(nome)
