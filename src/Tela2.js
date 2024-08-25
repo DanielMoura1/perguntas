@@ -2,13 +2,14 @@ import { Link ,useNavigate } from "react-router-dom";
 import axios from "axios";
 export default function Tela2(props){
     const navigate = useNavigate();
-    const {nome} = props
+    const {nome,setEscolha} = props
     async function tema1(){
       
         let escolha='Marvel'
         //await axios.post('http://54.236.47.96/tela2',{
          //   nome,escolha
       // })
+        setEscolha('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ15LI6olru60r5MCeS4tBsqELkznlwCAEgwA&usqp=CAU')
         navigate("/tela3");
     }
     async function tema2(){
@@ -17,6 +18,7 @@ export default function Tela2(props){
         //await axios.post('http://54.236.47.96/tela2',{
         //    nome,escolha
        //})
+       setEscolha("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBJu0ZGN0f46w6I19R8NTBt8XBSzhhfORxEw&usqp=CAU")
         navigate("/tela3");
     }
     return(
